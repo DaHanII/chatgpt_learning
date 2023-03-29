@@ -1,9 +1,9 @@
 import openai
 from openai.embeddings_utils import cosine_similarity, get_embedding
-import settings
+import settings.setting as setting
 
 # 获取访问open ai的密钥
-openai.api_key = settings.API_KEY
+openai.api_key = setting.OpenAI_settings['key']
 # 选择使用最小的ada模型
 EMBEDDING_MODEL = "text-embedding-ada-002"
 
